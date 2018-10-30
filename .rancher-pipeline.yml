@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: maven:v1
+      image: reg.aiyinsitanfm.com/application/maven3.5.4:20181018
       shellScript: mvn clean package
 - name: publish
   steps:
