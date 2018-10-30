@@ -1,0 +1,17 @@
+﻿apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo
+        track: stable
+    spec:
+      containers:
+      - name: demo
+        image: 10.3.10.131:5000/gsafety/demo:v1
+        ports:
+        - containerPort: 8080
