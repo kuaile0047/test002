@@ -11,12 +11,8 @@ stages:
       buildContext: .
       tag: gsafety/demo:v1
       pushRemote: true
-      registry: 10.3.10.131:5000
+      registry: reg.aiyinsitanfm.com
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
-- name: deploy
-  steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
 timeout: 60
